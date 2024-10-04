@@ -1,0 +1,364 @@
+/* General Reset and Body Styles */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Dark Blue Section Styles */
+.dark-blue {
+  background-color: #1f2937;
+  margin: 0;
+  padding: 10px 13vw;
+  height: 500px;
+}
+
+/* Navigation Styles */
+ul.nav {
+  list-style-type: none;
+  display: flex;
+  gap: 18px; /* Adds space between list items */
+  margin: 0;
+  padding: 0;
+}
+
+ul.nav li a {
+  color: #e5e7eb; /* Light text color */
+  font-size: 18px; /* Adjust font size for better readability */
+  padding: 5px 10px; /* Adds some padding for clickable area */
+  border-radius: 5px; /* Adds rounded corners */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+ul.nav li a:hover {
+  background-color: #374151; /* Subtle background change on hover */
+  color: #ffffff; /* Change text color on hover */
+}
+
+/* Logo Styles */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f8fafc;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Welcome Section */
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px; /* Adjust this to control how low the section starts */
+}
+
+.welcome .image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+}
+
+.welcome .image img {
+  width: 100%; /* Image fully fills the container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Fill the space, but maintain aspect ratio */
+  border-radius: 10px;
+  display: block; /* Ensure the image behaves like a block element */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .welcome .image img {
+    width: 100%; /* Image will adjust to container's width */
+    height: auto; /* Keep aspect ratio */
+  }
+}
+
+/* Description Styles */
+.discription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  height: 300px;
+  flex: auto;
+}
+
+/* Heading Styles */
+.heading {
+  font-size: 48px;
+  font-weight: bold;
+  color: #f8fafc;
+}
+
+/* Sub-Heading Styles */
+.sub-heading {
+  font-size: 18px; /* Font size */
+  color: #e5e7eb; /* Text color */
+  max-width: 500px; /* Set a max width to constrain the text */
+  white-space: normal; /* Allow wrapping */
+}
+
+.sub-heading b {
+  font-weight: bold; /* Keep the text bold */
+  margin: 0 2px; /* Add some space around the name */
+}
+
+.image {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  background-color: gray; /* Fallback color */
+  border-radius: 10px;
+  overflow: hidden; /* Ensure image doesn't overflow */
+}
+/* Image Styles */
+.dark-blue .image {
+  display: black;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  aspect-ratio: 3 / 1;
+}
+
+/* Join Button Styles */
+.join-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3882f6; /* Initial background color */
+  border: none; /* Remove default border */
+  border-radius: 14px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 4px 6px rgba(68, 68, 68, 0.603); /* Subtle shadow */
+  padding: 0; /* Reset padding on the button */
+}
+
+.join-button a {
+  color: white; /* Text color */
+  font-size: 18px; /* Font size */
+  font-weight: 600; /* Font weight */
+  padding: 12px 20px; /* Padding for clickable area */
+  display: inline-block; /* Ensures the padding is applied correctly */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect */
+.join-button:hover {
+  background-color: #2ba9adaf; /* Change background on hover */
+}
+
+/* Active state */
+.join-button:active {
+  background-color: #3e8e41; /* Change background when active */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Reduce shadow when pressed */
+  transform: scale(0.95); /* Slightly scale down */
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+/* Info Header Styles */
+.info-header {
+  font-size: 36px;
+  font-weight: 900;
+  color: #1f2937;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+/* Content Image Styles */
+.content .image {
+  width: 100%; /* Set fixed width */
+  height: 100%; /* Set fixed height */
+  max-width: 350px;
+  min-width: 3000px;
+  min-width: 200px;
+  height: auto;
+  aspect-ratio: 7 / 6;
+  display: flex; /* Use flexbox for centering content */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  background-color: white; /* Background color */
+  color: #3882f6; /* Text color */
+  border: 4px solid #3882f6; /* Solid border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: 6px;
+}
+
+/* Info Content Layout */
+.info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* Main Content Layout */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 60px;
+  gap: 60px;
+}
+
+.quote {
+  background-color: #e5e7eb;
+  padding: 100px 200px;
+  display: flex;
+  flex-direction: column;
+  font-size: 36px;
+  gap: 10px;
+}
+.quote .container {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+}
+.quote-text {
+  display: flex;
+  justify-content: flex-start;
+  font-style: italic;
+  color: #1f2937b2;
+}
+.quote-author {
+  display: flex;
+  justify-content: flex-end;
+  font-style: italic;
+}
+
+.space {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 200px;
+  margin: 0;
+  gap: 20px;
+}
+
+.call-to-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #3882f6;
+  border-radius: 8px;
+  width: 800px;
+  height: 120px;
+  flex: auto;
+  color: white;
+  margin: 0;
+  gap: 20px;
+}
+.call-to-action-heading {
+  font-size: 20px;
+  font-weight: 700;
+}
+.call-to-action-sub-heading {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.897);
+}
+.call-to-action .join-button {
+  box-shadow: none;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 0;
+}
+.call-to-action a {
+  padding: 12px 30px;
+}
+.call-to-action .join-button:hover {
+  background-color: rgba(49, 49, 49, 0.26); /* Change background on hover */
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f2937;
+  color: rgba(255, 255, 255, 0.61);
+  font-size: 16px;
+  height: 80px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .dark-blue {
+    padding: 10px 10vw;
+  }
+
+  .content {
+    margin: 0 30px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dark-blue .image {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .content .image {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .call-to-action {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .call-to-action .join-button {
+    width: 100%;
+  }
+}
